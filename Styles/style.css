@@ -115,29 +115,26 @@ main button {
 .pseudo-element div.example{
     height: 40px;
     width: 30%;
-    border: 1px solid gray;
+    border: 3px solid gray;
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    justify-content: center;
+    text-align: center;
     border-radius: 5px;
     font-weight: 600;
     position: relative;
     gap: 100px;
 }
 
-.pseudo-element div.example::before {
+.pseudo-element div.example:hover::before {
     transition: .5s;
     content: '';
-    height: 100%;
-    width: 6px;
+    height: 105%;
+    width: 20px;
     background: green;
     position: absolute;
     left: 0;
-    border-radius: 5px 0 0 5px;
-}
-
-.pseudo-element div.example:hover::before {
-    background-color: blue;
+    border-radius: 2px 0 0 2px;
 }
 
 .pseudo-element ul {
