@@ -5,8 +5,180 @@
     box-sizing: border-box;
 }
 
+body{ 
+    overflow-y: hidden;
+}
+
 #explanation, #example {
     height: 100vh;
     width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
+#explanation {
+    gap: 30px;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 3% 10%;
+    position: relative;
+}
+
+main button {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    transform: rotate(90deg);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* styling the examples */
+.pseudo-class,
+.pseudo-element {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#example {
+    display: flex;
+    flex-direction: row;
+}
+
+.pseudo-class {
+    display: flex;
+ 
+}
+
+.pseudo-class div {
+    height: 200px;
+    width: 40%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background: linear-gradient(rgb(58, 15, 81),rgb(126, 36, 174));
+}
+
+.pseudo-class div:hover {
+    background: linear-gradient(rgb(107, 2, 2),rgba(255, 5, 5, 0.817)); 
+}
+
+
+
+.pseudo-class .click-me {
+    height: 40px;
+    width: 40%;
+    background: linear-gradient( rgb(65, 64, 64), rgb(34, 33, 33) );
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+.pseudo-class button:hover {
+    background: linear-gradient(  rgb(5, 83, 5), rgb(10, 154, 10) );
+}
+
+.pseudo-class button:active {
+    background: linear-gradient( rgb(64, 8, 8), rgb(120, 22, 22) );
+}
+.pseudo-class a:visited {
+    color: green;
+}
+
+/* pseudo elements */
+.pseudo-element p {
+    font-size: 30px;
+}
+
+.pseudo-element p.example::first-letter {
+    color: orange;
+}
+
+.pseudo-element div.example{
+    height: 40px;
+    width: 30%;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    position: relative;
+    gap: 100px;
+}
+
+.pseudo-element div.example::before {
+    transition: .5s;
+    content: '';
+    height: 100%;
+    width: 6px;
+    background: green;
+    position: absolute;
+    left: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.pseudo-element div.example:hover::before {
+    background-color: blue;
+}
+
+.pseudo-element ul {
+    border: 1px solid gray;
+    width: 30%;
+    padding: 40px;
+    border-radius: 5px;
+}
+
+.pseudo-element ul li {
+    font-size: 20px;
+}
+
+.pseudo-class .links li:first-child {
+    color: red;
+}
+
+.pseudo-class .links li:last-child {
+    color: blue;
+}
+
+.pseudo-class .links li:nth-child(3) {
+    color: green;
+}
+
+#example .paragraph {
+    font-size: 20px;
+    width: 50%;
+}
+
+::selection {
+    background-color: rgba(63, 179, 50, 0.527);
+}
+
+#example .move-up {
+    position: relative;
+    top: 40%;
+    right: 2%;
+    transform: rotate(-90deg);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+}

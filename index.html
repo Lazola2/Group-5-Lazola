@@ -3,39 +3,102 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Pseudo-class & Pseudo-class-selectors</title>
+    <title>Pseudo-class & Pseudo-selectors</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='Styles/style.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
 <body>
     </header>
     <div id="explanation">
         <h1>Pseudo classes and Pseudo selectors</h1>
-        <span class="psedo-classes">
-            <h3>Pseudo classes</h3>
-            <p>
-                A pseudo class is used to define a 
-                special state of an element.
-                <br>
-                It can be used to style elements when certain
-                evens happen on them like: 
-
-                <ul>
-                    <li>When a user hovers over an element</li>
-                    <li>Styling visited and unvisited links</li>
-                    <li>Style an event when it gets clicked</li>
-                </ul>
-
-                Examples include: hover, active, visited, link etc. 
-            </p>
-        </span>
-        <span class="pseudo-selectors">
-            <h3>Pseudo selectors</h3>
-            <p></p>
-        </span>
-        
+        <main>
+            <span class="psedo-classes">
+                <h3>Pseudo classes</h3>
+                <p>
+                    A pseudo class is used to define a 
+                    special state of an element.
+                    <br>
+                    It can be used to style elements when certain
+                    events happen on them like: 
+    
+                    <ul>
+                        <li>When a user hovers over an element</li>
+                        <li>Styling visited and unvisited links</li>
+                        <li>Style an event when it gets clicked</li>
+                    </ul>
+                    Examples include: hover, active, first-child, last-child, nth-child etc
+    
+                    <br><br>
+                    Syntax: 
+                    <br>
+                    <code>
+                        selector:pseudo-class { <br>
+                            &ensp; property: value <br>
+                        }
+                    </code>
+                    
+                </p>
+            </span>
+            <span class="pseudo-selectors">
+                <h3>Pseudo selectors</h3>
+                <p>
+                    A pseudo element is used to style specified parts of an element.
+                    <br>
+                    It can be used to: 
+                    <ul>
+                        <li>Style the first letter or a line of an element.</li>
+                        <li>Insert content before, or after the content of an element</li>
+                    </ul>
+    
+                    Examples include: first-letter, before, selection etc
+                    <br><br>
+                    Syntax: 
+                    <br>
+                    <code>
+                        selector::pseudo-selector { <br>
+                            &ensp; property: value <br>
+                        }
+                    </code> 
+                </p>
+            </span>
+            <a href="#example">
+                <button>></button>
+            </a>
+            
+        </main> 
     </div>
-    <div id="example"></div>
+
+    <div id="example">
+        <section class="pseudo-class">
+            <h2>Pseudo Class Examples</h2>
+            <div></div>
+            <button class="click-me"> Click Me</button>
+            <ul class="links">
+                <li>Link 1</li>
+                <li>Link 2</li>
+                <li>Link 3</li>
+                <li>Link 4</li>
+                <li>Link 5</li>
+            </ul>
+        </section>
+
+        <section class="pseudo-element">
+            <h2>Pseudo Selector Examples</h2>
+            <!-- first letter -->
+            <p class="example">Example</p>
+
+            <!-- before  -->
+            <div class="example">Example</div>
+            <p class="paragraph">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dolores.
+            </p>  
+        </section>
+        
+        <a href="#explanation">
+            <button class="move-up">></button>
+        </a>
+    </div>
 </body>
 </html>
